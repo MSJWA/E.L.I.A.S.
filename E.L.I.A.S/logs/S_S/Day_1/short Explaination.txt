@@ -1,0 +1,1 @@
+I added the “search_youtube” intent to the NLP system. This intent detects user commands like “search youtube lofi beats” and extracts the search query from the text. I used a simple regex with a named group (?P<query>) so that whatever comes after “search youtube” is captured. This makes the AI assistant understand YouTube search commands and pass the query to the action layer.

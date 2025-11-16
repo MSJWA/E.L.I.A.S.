@@ -1,0 +1,12 @@
+The “search_youtube” intent is designed to detect commands in the format: search youtube <query>. The regex used was: r"search youtube (?P<query>.+)", with the IGNORECASE flag.
+
+Breakdown:
+- “search youtube” matches the literal command.
+- A space follows.
+- (?P<query>.+) is a named group that captures all remaining text as the search query.
+- The + quantifier ensures at least one character is captured.
+- The IGNORECASE flag allows upper/lowercase variations.
+
+When parse_intent() runs, it loops through patterns and tests this regex. If it matches, match.groupdict() returns {"query": "<user text>"}. This integrates cleanly into the assistant pipeline, where the routing layer will later call a YouTube search plugin using the extracted query.
+
+This pattern was chosen because it is simple, predictable, and a common action for users. It is also easy to extend (e.g., “search yt”, “search on youtube”). For now, this version keeps the system clean, modular, and easy to debug.
