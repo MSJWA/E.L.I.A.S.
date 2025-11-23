@@ -1,0 +1,3 @@
+2025-11-23T09:01:34.461674Z | input:'search youtube' | intent:search_youtube | entities:{'query': 'youtube'} | result:{'ok': False, 'message': "No plugin for intent 'search_youtube'."}
+2025-11-23T09:01:42.178541Z | input:'search youtube.com' | intent:search_youtube | entities:{'query': '.com'} | result:{'ok': False, 'message': "No plugin for intent 'search_youtube'."}
+2025-11-23T09:04:50.506608Z | input:'create note' | intent:unknown | entities:{} | result:{'ok': False, 'message': "No plugin for intent 'unknown'."}
