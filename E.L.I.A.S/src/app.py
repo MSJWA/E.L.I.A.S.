@@ -36,6 +36,9 @@ def safe_import(module_path, attr="run"):
     except Exception:
         return None
 
+import sys
+sys.path.append("..")   # allow parent folder access
+
 open_website = safe_import("plugins.open_website")
 youtube_search = safe_import("plugins.youtube_search")
 create_note = safe_import("plugins.create_note")

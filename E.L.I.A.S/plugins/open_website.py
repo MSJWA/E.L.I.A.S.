@@ -1,37 +1,46 @@
 import webbrowser
+import subprocess
+import sys
+import os
 
 def run(entities):
     """
-    Plugin: open_website
-    Input: entities = {'url': 'google.com'}
-    Output: dict with status and message.
+    Open a website reliably across IDEs:
+    - VS Code
+    - PyCharm
+    - Jupyter
+    - Colab
     """
 
-    # 1. extract URL field
     url = entities.get("url")
-
     if not url:
-        return {
-            "ok": False,
-            "message": "No URL provided."
-        }
+        return {"ok": False, "message": "No URL provided."}
 
-    # 2. clean input (remove accidental spaces)
     url = url.strip()
 
-    # 3. ensure protocol
+    # ensure protocol
     if not url.startswith(("http://", "https://")):
         url = "https://" + url
 
-    # 4. open safely
     try:
-        webbrowser.open(url)
-        return {
-            "ok": True,
-            "message": f"Opening {url}"
-        }
+        # 1️⃣ Try normal python webbrowser first
+        print("PLUGIN TRIGGERED: opening", url)
+    
+        browser_opened = webbrowser.open(url)
+        if browser_opened:
+            return {"ok": True, "message": f"Opening {url} (webbrowser)"}
+        
+        # 2️⃣ If webbrowser fails, fallback to OS-level opening
+        if sys.platform.startswith("win"):
+            os.startfile(url)  # Windows fallback
+
+        elif sys.platform.startswith("darwin"):
+            subprocess.Popen(["open", url])  # macOS fallback
+
+        else:
+            subprocess.Popen(["xdg-open", url])  # Linux fallback
+
+        return {"ok": True, "message": f"Opening {url} (OS fallback)"}
+    
     except Exception as e:
-        return {
-            "ok": False,
-            "message": f"Failed to open URL: {str(e)}"
-        }
+        return {"ok": False, "message": f"Failed to open URL: {str(e)}"}
