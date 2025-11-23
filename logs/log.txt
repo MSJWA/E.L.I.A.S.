@@ -1,0 +1,2 @@
+2025-11-23T08:42:03.054967Z | input:'open google.com' | intent:open_website | entities:{'url': 'google.com'} | result:{'ok': True, 'message': 'Opening https://google.com (webbrowser)'}
+2025-11-23T08:42:27.433578Z | input:'open google.com' | intent:open_website | entities:{'url': 'google.com'} | result:{'ok': True, 'message': 'Opening https://google.com (webbrowser)'}
