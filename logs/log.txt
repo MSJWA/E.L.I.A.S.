@@ -3,3 +3,9 @@
 2025-11-23T09:18:32.953754Z | input:'open youtube' | intent:unknown | entities:{} | result:{'ok': False, 'message': "No plugin for intent 'unknown'."}
 2025-11-23T09:18:37.094986Z | input:'create note' | intent:create_note | entities:{'text': 'note'} | result:{'ok': True, 'message': 'Note saved.'}
 2025-11-23T09:18:54.709761Z | input:'create note to go to the town' | intent:create_note | entities:{'text': 'to go to the town'} | result:{'ok': True, 'message': 'Note saved.'}
+2025-11-23T10:02:42.961207Z | input:'open youtube' | intent:unknown | entities:{} | result:{'ok': False, 'message': "No plugin for intent 'unknown'."}
+2025-11-23T10:02:48.349968Z | input:'create note' | intent:create_note | entities:{'text': 'note'} | result:{'ok': True, 'message': 'Note saved.'}
+2025-11-23T10:03:46.884230Z | input:'open youtube' | intent:unknown | entities:{} | result:{'ok': False, 'message': "No plugin for intent 'unknown'."}
+2025-11-23T10:03:54.142305Z | input:'create note' | intent:create_note | entities:{'text': 'note'} | result:{'ok': True, 'message': 'Note saved.'}
+2025-11-23T10:12:02.497866Z | input:'open youtube.com' | intent:open_website | entities:{'url': 'youtube.com'} | result:{'ok': True, 'message': 'Opening https://youtube.com (webbrowser)'}
+2025-11-23T10:12:23.293301Z | input:'create note wow berry dangerous' | intent:create_note | entities:{'text': 'wow berry dangerous'} | result:{'ok': True, 'message': 'Note saved.'}
