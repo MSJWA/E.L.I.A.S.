@@ -1,0 +1,4 @@
+"open_app": "plugins.open_app",
+"play_music": "plugins.play_music",
+"system_info": "plugins.system_info",
+"time_date": "plugins.time_date",
