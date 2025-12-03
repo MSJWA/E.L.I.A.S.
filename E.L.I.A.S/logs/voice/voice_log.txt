@@ -1,0 +1,4 @@
+Reject: too low RMS
+Reject: too low RMS
+AUTH SUCCESS score=0.888
+AUTH SUCCESS score=0.888

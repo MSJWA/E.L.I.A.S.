@@ -1,0 +1,4 @@
+{"ts": "2025-12-02T20:17:13.008081Z", "kind": "face_register", "msg": "user 01 registered", "extra": {"samples": 6}}
+{"ts": "2025-12-02T20:42:34.146571Z", "kind": "voice_enroll", "msg": "user 01 enrolled", "extra": {"samples": 3}}
+{"ts": "2025-12-02T20:43:42.054002Z", "kind": "auth", "msg": "result", "extra": {"user": "01", "face_score": 0.9958672604744923, "voice_score": 0.9861795479583446, "combined": 0.9919921754680332, "ok": true}}
+{"ts": "2025-12-02T20:44:06.648841Z", "kind": "auth", "msg": "result", "extra": {"user": "01", "face_score": 0.9964558028167867, "voice_score": 0.9837565046507013, "combined": 0.9913760835503526, "ok": true}}
